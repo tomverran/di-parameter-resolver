@@ -54,7 +54,7 @@ class ContainerParameterResolver implements ParameterResolver
         foreach ( $parameters as $parameter ) {
 
             if ( $parameter->getClass() ) {
-                $arguments[] = $this->container->get( $parameter->getClass() );
+                $arguments[] = $this->container->get( $parameter->getClass()->getName() );
             } else if ( $parameter->isDefaultValueAvailable() ) {
                 $arguments[] = $parameter->getDefaultValue();
             } else {

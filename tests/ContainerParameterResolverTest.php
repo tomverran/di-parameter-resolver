@@ -21,7 +21,9 @@ class ContainerParameterResolverTest extends PHPUnit_Framework_TestCase
      */
     public function setUp()
     {
-        $myDodgyContainer = new \tomverran\di\Injector();
+        $myDodgyContainer = new \TomVerran\MockContainer( [
+           stdClass::class => stdClass::class
+        ] );
         $this->resolver = new ContainerParameterResolver( $myDodgyContainer );
     }
 
@@ -49,9 +51,9 @@ class ContainerParameterResolverTest extends PHPUnit_Framework_TestCase
      */
     public function testWithTypeHint()
     {
-        $params = ( new ReflectionFunction( function( StdClass $hello ) {} ) )->getParameters();
+        $params = ( new ReflectionFunction( function( stdClass $hello ) {} ) )->getParameters();
         $resolved = $this->resolver->resolveParameters( $params );
-        $this->assertInstanceOf(StdClass::class, array_shift( $resolved ) );
+        $this->assertInstanceOf( stdClass::class, array_shift( $resolved ) );
     }
 
     /**
