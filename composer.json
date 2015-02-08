@@ -1,0 +1,34 @@
+{
+    "name": "tomverran/parameter-resolver",
+    "type": "library",
+    "description": "An interface to enhance interoperability between DI containers",
+    "keywords": ["DI", "IoC", "Container"],
+    "homepage": "https://carefulcoder.co.uk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tom Verran",
+            "homepage": "https://carefulcoder.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "container-interop/container-interop": "~1.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://carefulcoder.co.uk/composer"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*",
+        "tomverran/di": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "TomVerran\\": "src/"
+        }
+    }
+}
