@@ -1,5 +1,5 @@
 {
-    "name": "tomverran/parameter-resolver",
+    "name": "tomverran/di-parameter-resolver",
     "type": "library",
     "description": "An interface to enhance interoperability between DI containers",
     "keywords": ["DI", "IoC", "Container"],
@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "php": ">=5.5.0",
+        "php": ">=5.5   .0",
         "container-interop/container-interop": "~1.0"
     },
     "repositories": [
