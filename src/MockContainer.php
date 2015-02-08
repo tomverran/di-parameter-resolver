@@ -30,7 +30,7 @@ class MockContainer implements ContainerInterface
         if ( !$this->has( $id ) ) {
             throw new \Exception( 'No mapping for ' . $id );
         }
-        return new $this->mappings[$id];
+        return $this->mappings[$id];
     }
 
     /**

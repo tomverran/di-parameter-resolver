@@ -22,7 +22,7 @@ class ContainerParameterResolverTest extends PHPUnit_Framework_TestCase
     public function setUp()
     {
         $myDodgyContainer = new \TomVerran\MockContainer( [
-           stdClass::class => stdClass::class
+           stdClass::class => new stdClass
         ] );
         $this->resolver = new ContainerParameterResolver( $myDodgyContainer );
     }
