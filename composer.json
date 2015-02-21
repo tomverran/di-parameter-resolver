@@ -13,8 +13,9 @@
         }
     ],
     "require": {
-        "php": ">=5.5   .0",
-        "container-interop/container-interop": "~1.0"
+        "php": ">=5.5.0",
+        "container-interop/container-interop": "~1.0",
+        "tomverran/di-container-mock": "dev-master"
     },
     "repositories": [
         {
